@@ -43,7 +43,6 @@ def news_func(bot, update):
 def contact_func(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text=" @robertadmin on telegram \n team@bethereum.com")
 
-#query = MessageHandler(Filters.document, Query)
 start_handler = CommandHandler('start', start_func)
 telegram_handler = CommandHandler('telegram', telegram_func)
 reddit_handler = CommandHandler('reddit', reddit_func)
@@ -57,7 +56,6 @@ introvideo_func = CommandHandler('introvideo', introvideo_func)
 news_func = CommandHandler('news', news_func)
 contact_func = CommandHandler('contact', contact_func)
 
-#dispatcher.add_handler(query)
 dispatcher.add_handler(start_handler)
 dispatcher.add_handler(telegram_handler)
 dispatcher.add_handler(reddit_handler)
