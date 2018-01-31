@@ -5,12 +5,12 @@ With positive feedback we've received in our [Bitcoitalk thread](https://bitcoin
 *To stay up-to-date with our contributions to the crypto-community join our [Telegram group](https://t.me/bethereum)*
 
 ## Table of contents
-- [Introduction](https://github.com/bethereumproject/telegram-bots/#Introduction)
-- [Installing](https://github.com/bethereumproject/telegram-bots/#Installing)
-- [Use-cases](https://github.com/bethereumproject/telegram-bots/#Use-cases)
-    - CommandBot
-    - QueryBot
-    - GroupButler
+- [Introduction](https://github.com/bethereumproject/telegram-bots/#introduction)
+- [Installing](https://github.com/bethereumproject/telegram-bots/#installing)
+- [Use-cases](https://github.com/bethereumproject/telegram-bots/#use-cases)
+    - [CommandBot](https://github.com/bethereumproject/telegram-bots/#commandbot)
+    - [QueryBot](https://github.com/bethereumproject/telegram-bots/#querybot)
+    - [GroupButler](https://github.com/bethereumproject/telegram-bots/#groupmanager)
 
 ## Introduction
 This is a guide for the crypto community, all current and future Crypto project developers and any other enthusiasts.
