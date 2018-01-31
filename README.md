@@ -22,9 +22,18 @@ You can install or upgrade python-telegram-bot with:
 ```
 pip install python-telegram-bot --upgrade
 ```
+Or you can install from source with:
+```
+$ git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
+$ cd python-telegram-bot
+$ python setup.py install
+```
 
 ## Use-cases
-Telegram is one of the most used messengers in the crypto-community and therefore it's a crucial asset for any Cryptocurrency related group. These bots 
+Telegram is one of the most used messengers in the crypto-community and therefore it's a crucial asset for any Cryptocurrency related group. These bots provide the following functionality:
+
+# CommandBot
+A command bot is a simple way to communicate the most important information to your members and supporters, such as Social Media links, news or PR contacts. With new members joining the telegram groups there are going to be a lot of similar questions asked constantly. This is a nice solution to deload the work of the social media managers.
 
 
 
