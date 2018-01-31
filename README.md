@@ -18,6 +18,11 @@ I'd like to credit [python-telegram-bot](https://python-telegram-bot.org/) for c
 
 ## Installing
 
+You can install or upgrade python-telegram-bot with:
+'''
+pip install python-telegram-bot --upgrade
+'''
+
 ## Use-cases
 Telegram is one of the most used messengers in the crypto-community and therefore it's a crucial asset for any Cryptocurrency related group. These bots 
 
