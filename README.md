@@ -41,10 +41,17 @@ Simple way to communicate the most important information to your members and sup
 - Telegram user verification
 
 **Getting started with your CommandBot code**
-```
+Importing modules:
+```python
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 ```
+Declaring the start function:
+```python
+def start(bot, update):
+    bot.send_message(chat_id=update.message.chat_id, text='Hello ' + update.message.from_user['first_name'] + '!' '\nI am the *BethereumBot*, click on /help to find out how I can assist you.' , parse_mode = 'Markdown')
+```
+
 
 
 
