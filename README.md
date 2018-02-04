@@ -54,13 +54,13 @@ The [python-telegram-bot](https://python-telegram-bot.org/) wrapper we'll be usi
 
 **Note:** see the documentation for [CommandHandlers](http://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.commandhandler.html) and [MessageHandlers](http://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.messagehandler.html).
 
-**Importing modules:**
+Importing modules:
 ```python
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 ```
 
-**Setting up the logging module:**
+Setting up the logging module:
 ```python
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -91,7 +91,7 @@ Defining the unkown function:
 def unknown(bot, update):
      bot.send_message(chat_id=update.message.chat_id, text="Sorry, I didn't understand that command, please click at /help to see a list of all available commands.")
 ```
-**Note:** Look at the following documentation for possible [Bot actions](http://python-telegram-bot.readthedocs.io/en/latest/telegram.bot.html#)
+**Note:** Look at the following documentation for possible [Bot actions](http://python-telegram-bot.readthedocs.io/en/latest/telegram.bot.html#).
 
 ### Setting up the bot API token
 Setting up the Updater:
@@ -118,4 +118,4 @@ updater.start_polling()
 ### Notes
 There are **many ways of doing the same thing**, maybe you've noticed we used `bot.send_message` in one function and `update.message.reply_text` in another, therefore we advise you to read the [documentation](http://python-telegram-bot.readthedocs.io/en/latest/index.html) provided for the wrapper.
 
-
+We're going to add a guide for the deployment of your bot soon!
