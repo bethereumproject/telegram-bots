@@ -39,7 +39,10 @@ Simple way to communicate the most important information to your members and sup
 - PR contacts
 - Any repetative questions
 
-
+Getting started with your CommandBot code:
+```
+ 
+```
 
 
 
