@@ -13,6 +13,7 @@ With positive feedback we've received in our [Bitcoitalk thread](https://bitcoin
     - [Defining the functions](https://github.com/bethereumproject/telegram-bots/#defining-the-functions)
     - [Setting up the bot API token](https://github.com/bethereumproject/telegram-bots/#setting-up-the-bot-api-token)
     - [Linking your functions](https://github.com/bethereumproject/telegram-bots/#linking-your-functions)
+    - [Notes](https://github.com/bethereumproject/telegram-bots/#notes)
 - [QueryBot](https://github.com/bethereumproject/telegram-bots/#querybot)
 - [GroupButler](https://github.com/bethereumproject/telegram-bots/#groupmanager)
 
@@ -51,7 +52,7 @@ The [python-telegram-bot](https://python-telegram-bot.org/) wrapper we'll be usi
 2. By adding CommmandHandlers or MessageHandlers you **link these functions to the commands or messages** written by a user.
 
 
-**Note:** see the documentation for [CommandHandlers](http://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.commandhandler.html) and [MessageHandlers](http://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.messagehandler.html)
+**Note:** see the documentation for [CommandHandlers](http://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.commandhandler.html) and [MessageHandlers](http://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.messagehandler.html).
 
 **Importing modules:**
 ```python
@@ -76,7 +77,7 @@ def start(bot, update):
 Defining the help function:
 ```python
 def help(bot, update):
-    bot.reply_text("Currently I can't help you with anything, talk to my developers and tell them to add more functions and CommandHandlers!")
+    update.message.reply_text("Currently I can't help you with anything, talk to my developers and tell them to add more functions and CommandHandlers!")
 ```
 
 Function for possible errors caused by updates:
@@ -113,5 +114,8 @@ The following line of code will tell the bot to **start getting updates from Tel
 ```python
 updater.start_polling()
 ```
+
+### Notes
+There are **many ways of doing the same thing**, maybe you've noticed we used `bot.send_message` in one function and `update.message.reply_text` in another, therefore we advise you to read the [documentation](http://python-telegram-bot.readthedocs.io/en/latest/index.html) provided for the wrapper.
 
 
