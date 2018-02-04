@@ -47,7 +47,7 @@ Open up [@Botfather](https://telegram.me/BotFather) on Telegram to create your n
 ### Getting started with your code
 
 The [python-telegram-bot](https://python-telegram-bot.org/) wrapper we'll be using works the following way:
-1. You **declare functions** to tell your bot what to do when someone writes a command beginning with "/" or a message.
+1. You **define functions** to tell your bot what to do when someone writes a command beginning with "/" or a message.
 2. By adding CommmandHandlers or MessageHandlers you **link these functions to the commands or messages** written by a user.
 
 
@@ -57,7 +57,8 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 ```
 
-Setting up the logging module, this is not something users who interact with the bot will see. It's simply for **debugging**:
+
+**Setting up the logging module:**
 ```python
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -65,7 +66,7 @@ logger = logging.getLogger(__name__)
 ```
 
 ### Defining the functions
-Declaring the start function:
+Defining the start function:
 ```python
 def start(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text='Hello ' + update.message.from_user['first_name'] + '!' '\nI am the *BethereumBot*, click on /help to find out how I can assist you.' , parse_mode = 'Markdown')
@@ -98,5 +99,10 @@ dp.add_handler(MessageHandler(Filters.command, unknown)) # Runs the unkown funct
 dp.add_error_handler(error) # Runs the error function declared above when there are any errors in the backend
 ```
 
+### Starting your bot
+The following line of code will tell the bot to **start getting updates from Telegram:**
+```python
+updater.start_polling()
+```
 
 
