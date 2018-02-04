@@ -73,6 +73,12 @@ def start(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text='Hello ' + update.message.from_user['first_name'] + '!' '\nI am the *BethereumBot*, click on /help to find out how I can assist you.' , parse_mode = 'Markdown')
 ```
 
+Defining the help function:
+```python
+def help(bot, update):
+    bot.reply_text("Currently I can't help you with anything, talk to my developers and tell them to add more functions and CommandHandlers!")
+```
+
 Function for possible errors caused by updates:
 ```python
 def error(bot, update, error):
@@ -89,7 +95,7 @@ def unknown(bot, update):
 ### Setting up the bot API token
 Setting up the Updater:
 ```python
-updater = Updater(token='12345:AAABBCCDDEEFFGGHHIIJJJKKLLMMNN') # Copy the Token from the Botfather here
+updater = Updater(token='123456:AAABBCCDDEEEFFFGGHHHIIIJJKKLL') # Copy the Token from the Botfather here
 dp = updater.dispatcher
 ```
 
@@ -97,6 +103,7 @@ dp = updater.dispatcher
 You have to link the functions declared above with commands or messages written by a user:
 ```python
 dp.add_handler(CommandHandler('start', start)) # Runs the start function declared above when a user writes /start
+dp.add_handler(CommandHandler('help', help)) # Runs the help function declared above when a user writes /help
 dp.add_handler(MessageHandler(Filters.command, unknown)) # Runs the unkown function declared above when a user writes an unkown command
 dp.add_error_handler(error) # Runs the error function declared above when there are any errors in the backend
 ```
