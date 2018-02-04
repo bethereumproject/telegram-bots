@@ -7,10 +7,9 @@ With positive feedback we've received in our [Bitcoitalk thread](https://bitcoin
 ## Table of contents
 - [Introduction](https://github.com/bethereumproject/telegram-bots/#introduction)
 - [Installing](https://github.com/bethereumproject/telegram-bots/#installing)
-- [Use-cases](https://github.com/bethereumproject/telegram-bots/#use-cases)
-    - [CommandBot](https://github.com/bethereumproject/telegram-bots/#commandbot)
-    - [QueryBot](https://github.com/bethereumproject/telegram-bots/#querybot)
-    - [GroupButler](https://github.com/bethereumproject/telegram-bots/#groupmanager)
+- [CommandBot](https://github.com/bethereumproject/telegram-bots/#commandbot)
+- [QueryBot](https://github.com/bethereumproject/telegram-bots/#querybot)
+- [GroupButler](https://github.com/bethereumproject/telegram-bots/#groupmanager)
 
 ## Introduction
 This is a guide for the crypto community, all current and future Crypto project developers and any other enthusiasts.
@@ -29,10 +28,7 @@ $ cd python-telegram-bot
 $ python setup.py install
 ```
 
-## Use-cases
-Telegram is one of the most used messengers in the crypto-community and therefore it's a crucial asset for any Cryptocurrency related group. These bots provide the following functionality:
-
-### CommandBot
+## CommandBot
 Simple way to communicate the most important information to your members and supporters, such as:
 - Social Media links
 - News
