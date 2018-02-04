@@ -48,7 +48,8 @@ Open up [@Botfather](https://telegram.me/BotFather) on Telegram to create your n
 
 The [python-telegram-bot](https://python-telegram-bot.org/) wrapper we'll be using works the following way:
 1. You **define functions** to tell your bot what to do when someone writes a command beginning with "/" or a message.
-2. By adding CommmandHandlers or MessageHandlers you **link these functions to the commands or messages** written by a user.  
+2. By adding CommmandHandlers or MessageHandlers you **link these functions to the commands or messages** written by a user.
+</ br>
 **Note:** see the documentation for [CommandHandlers](http://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.commandhandler.html) and [MessageHandlers](http://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.messagehandler.html)
 
 **Importing modules:**
