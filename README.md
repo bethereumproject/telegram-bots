@@ -20,13 +20,13 @@ I'd like to credit [python-telegram-bot](https://python-telegram-bot.org/) for c
 
 You can install or upgrade python-telegram-bot with:
 ```
-pip install python-telegram-bot --upgrade
+$ pip install python-telegram-bot --upgrade
 ```
 Or you can install from source with:
 ```
-git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
-cd python-telegram-bot
-python setup.py install
+$ git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
+$ cd python-telegram-bot
+$ python setup.py install
 ```
 
 ## Use-cases
@@ -38,10 +38,12 @@ Simple way to communicate the most important information to your members and sup
 - News
 - PR contacts
 - Any repetative questions
+- Telegram user verification
 
-Getting started with your CommandBot code:
+**Getting started with your CommandBot code**
 ```
- 
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+import logging
 ```
 
 
