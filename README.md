@@ -8,7 +8,11 @@ With positive feedback we've received in our [Bitcoitalk thread](https://bitcoin
 - [Introduction](https://github.com/bethereumproject/telegram-bots/#introduction)
 - [Installing](https://github.com/bethereumproject/telegram-bots/#installing)
 - [CommandBot](https://github.com/bethereumproject/telegram-bots/#commandbot)
-    - [Before you begin]()
+    - [Before you begin](https://github.com/bethereumproject/telegram-bots/#before-you-begin)
+    - [Getting started with your code](https://github.com/bethereumproject/telegram-bots/#getting-started-with-your-code)
+    - [Defining the functions](https://github.com/bethereumproject/telegram-bots/#defining-the-functions)
+    - [Setting up the bot API token](https://github.com/bethereumproject/telegram-bots/#setting-up-the-bot-api-token)
+    - [Linking your functions](https://github.com/bethereumproject/telegram-bots/#linking-your-functions)
 - [QueryBot](https://github.com/bethereumproject/telegram-bots/#querybot)
 - [GroupButler](https://github.com/bethereumproject/telegram-bots/#groupmanager)
 
@@ -38,7 +42,7 @@ Simple way to communicate the most important information to your members and sup
 - Telegram user verification
 
 ### Before you begin
-Open up @Botfather on Telegram to create your new bot and receive the **API token**.
+Open up [@Botfather](https://telegram.me/BotFather) on Telegram to create your new bot and receive the **API token**.
 
 ### Getting started with your code
 
@@ -67,27 +71,27 @@ def start(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text='Hello ' + update.message.from_user['first_name'] + '!' '\nI am the *BethereumBot*, click on /help to find out how I can assist you.' , parse_mode = 'Markdown')
 ```
 
-Logging possible errors, once again you'll see these messages and warnings in the terminal or console:
+Logging possible errors caused by updates function:
 ```python
 def error(bot, update, error):
     logger.warning('Update "%s" caused error "%s"', update, error)
 ```
 
-Defining the unkown function, or telling the bot what to do when a user sends an unkown command:
+Defining the unkown function:
 ```python
 def unknown(bot, update):
      bot.send_message(chat_id=update.message.chat_id, text="Sorry, I didn't understand that command, please click at /help to see a list of all available commands.")
 ```
 
 ### Setting up the bot API token
-Setting up the Updater, this is where you'll add the Token you received from the Botfather:
+Setting up the Updater:
 ```python
 updater = Updater(token='12345:AAABBCCDDEEFFGGHHIIJJJKKLLMMNN') # Copy the Token from the Botfather here
 dp = updater.dispatcher
 ```
 
 ### Linking your functions
-As written above you have to link the functions declared above with commands or messages written by a user:
+You have to link the functions declared above with commands or messages written by a user:
 ```python
 dp.add_handler(CommandHandler('start', start)) # Runs the start function declared above when a user writes /start
 dp.add_handler(MessageHandler(Filters.command, unknown)) # Runs the unkown function declared above when a user writes an unkown command
