@@ -49,7 +49,7 @@ Open up [@Botfather](https://telegram.me/BotFather) on Telegram to create your n
 The [python-telegram-bot](https://python-telegram-bot.org/) wrapper we'll be using works the following way:
 1. You **define functions** to tell your bot what to do when someone writes a command beginning with "/" or a message.
 2. By adding CommmandHandlers or MessageHandlers you **link these functions to the commands or messages** written by a user.
-
+**Note:** see the documentation for [CommandHandlers](http://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.commandhandler.html) and [MessageHandlers](http://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.messagehandler.html)
 
 **Importing modules:**
 ```python
@@ -72,7 +72,7 @@ def start(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text='Hello ' + update.message.from_user['first_name'] + '!' '\nI am the *BethereumBot*, click on /help to find out how I can assist you.' , parse_mode = 'Markdown')
 ```
 
-Logging possible errors caused by updates function:
+Function for possible errors caused by updates:
 ```python
 def error(bot, update, error):
     logger.warning('Update "%s" caused error "%s"', update, error)
@@ -83,6 +83,7 @@ Defining the unkown function:
 def unknown(bot, update):
      bot.send_message(chat_id=update.message.chat_id, text="Sorry, I didn't understand that command, please click at /help to see a list of all available commands.")
 ```
+**Note:** Look at the following documentation for possible [Bot actions](http://python-telegram-bot.readthedocs.io/en/latest/telegram.bot.html#)
 
 ### Setting up the bot API token
 Setting up the Updater:
