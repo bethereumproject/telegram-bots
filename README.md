@@ -8,6 +8,7 @@ With positive feedback we've received in our [Bitcoitalk thread](https://bitcoin
 - [Introduction](https://github.com/bethereumproject/telegram-bots/#introduction)
 - [Installing](https://github.com/bethereumproject/telegram-bots/#installing)
 - [CommandBot](https://github.com/bethereumproject/telegram-bots/#commandbot)
+    - [Before you begin]()
 - [QueryBot](https://github.com/bethereumproject/telegram-bots/#querybot)
 - [GroupButler](https://github.com/bethereumproject/telegram-bots/#groupmanager)
 
@@ -36,9 +37,12 @@ Simple way to communicate the most important information to your members and sup
 - Any repetative questions
 - Telegram user verification
 
-**Getting started with your CommandBot code**
+### Before you begin
+Open up @Botfather on Telegram to create your new bot and receive the **API token**.
 
-The [python-telegram-bot](https://python-telegram-bot.org/) wrapper works the following way:
+### Getting started with your code
+
+The [python-telegram-bot](https://python-telegram-bot.org/) wrapper we'll be using works the following way:
 1. You **declare functions** to tell your bot what to do when someone writes a command beginning with "/" or a message.
 2. By adding CommmandHandlers or MessageHandlers you **link these functions to the commands or messages** written by a user.
 
@@ -56,6 +60,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 ```
 
+### Defining the functions
 Declaring the start function:
 ```python
 def start(bot, update):
@@ -74,12 +79,14 @@ def unknown(bot, update):
      bot.send_message(chat_id=update.message.chat_id, text="Sorry, I didn't understand that command, please click at /help to see a list of all available commands.")
 ```
 
+### Setting up the bot API token
 Setting up the Updater, this is where you'll add the Token you received from the Botfather:
 ```python
 updater = Updater(token='12345:AAABBCCDDEEFFGGHHIIJJJKKLLMMNN') # Copy the Token from the Botfather here
 dp = updater.dispatcher
 ```
 
+### Linking your functions
 As written above you have to link the functions declared above with commands or messages written by a user:
 ```python
 dp.add_handler(CommandHandler('start', start)) # Runs the start function declared above when a user writes /start
