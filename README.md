@@ -43,16 +43,17 @@ Simple way to communicate the most important information to your members and sup
 **Getting started with your CommandBot code**
 
 The [python-telegram-bot](https://python-telegram-bot.org/) wrapper works the following way:
-1. You declare functions to tell your bot what to do when someone writes a command beginning with "/" or a message.
-2. By adding CommmandHandlers or MessageHandlers you link these functions to the commands or messages written by a user.
+1. You **declare functions** to tell your bot what to do when someone writes a command beginning with "/" or a message.
+2. By adding CommmandHandlers or MessageHandlers you **link these functions to the commands or messages** written by a user.
 
-Importing modules:
+
+**Importing modules:**
 ```python
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 ```
 
-Setting up the logging module, this is not something users who interact with the bot will see. It's simply for debugging:
+Setting up the logging module, this is not something users who interact with the bot will see. It's simply for **debugging**:
 ```python
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
